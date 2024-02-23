@@ -1,0 +1,7 @@
+.imageDivEle{
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-item{
+    flex: auto;
+}
