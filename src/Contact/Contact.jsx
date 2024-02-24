@@ -53,7 +53,7 @@ function Contact() {
                      </nav>
                      </div>
                </div>
-             <h1>Contact Us</h1>
+             <h3>Contact Us</h3>
              <p>Thank you for your interest in reaching out to us. Your feedback, inquiries, and suggestions are invaluable to us as we strive to improve and provide the best possible experience for our visitors and customers. Please feel free to connect with us using any of the contact methods below.</p>
            </div>
            <div className="section-container-spacer">
@@ -114,7 +114,7 @@ function Contact() {
                 <div className="login-process">
                     <div className="login-main-container">
                         <div className="thankyou-wrapper">
-                            <img className='imgEle' src={thankyou} alt="thanks" />
+                            <img className='imgElement' src={thankyou} alt="thanks" />
                               <p>Thank you for taking the time to provide us with your valuable feedback. Your input helps us improve our services and ensure that we continue to meet your needs and preferences.. </p>
                                 <a href="home" className="btn btn-primary" title="">Go Back</a>
                               <div className="clr"></div>

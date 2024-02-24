@@ -8,6 +8,11 @@
 .imgElement{
     width: 59%;
 }
+@media (min-width:768px){
+    .imgElement{
+        width: 59%;
+    }
+}
 .thankyou-wrapper h1{
   text-align:center;
   color:#333333;

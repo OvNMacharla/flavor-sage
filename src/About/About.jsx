@@ -31,7 +31,7 @@ function About() {
   </div>
   <div className="col-xs-12 col-md-6">
   
-    <h1>About Our Flavor Sage</h1>
+    <h3>About Our Flavor Sage</h3>
     
     <p>Welcome to our Recipe Recommender, your go-to source for finding delicious recipes tailored to your preferences. Our mission is to simplify cooking and inspire you to explore new flavors and ingredients.</p>
     
