@@ -99,7 +99,7 @@ function Home() {
       <main className="" id="main-collapse">
         <div className="hero-full-wrapper">
         <div className="hidden-lg hidden-sm hidden-md hidden-xlg" style={{ display: 'flex',justifyContent:'space-between', gridGap: "10px" }}>
-              <a href='' className="site-brand" title="">
+              <a className="site-brand" title="">
                 <img className="img-responsive site-logo" alt="" src={logo} />
                 FLAVOR-SAGE
               </a>
@@ -152,7 +152,7 @@ function Home() {
                         </option>
                       ))}
                     </select>
-                    <a href='' className="btn btn-primary" onClick={currentIndex === questions.length - 1 ? close : handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? 'Close' : 'Next'}</a>
+                    <a className="btn btn-primary" onClick={currentIndex === questions.length - 1 ? close : handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? 'Close' : 'Next'}</a>
                   </div>
                 </div>
               )}
