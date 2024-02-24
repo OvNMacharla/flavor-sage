@@ -18,7 +18,7 @@ function Header() {
         <p>Discover personalized recipes tailored to your tastes with our recipe recommendation platform.</p>
       </div>
       <nav className="navEle">
-        <NavLink className='link' to="/home" title="">Home</NavLink>
+        <NavLink className='link' to="/" title="">Home</NavLink>
         <NavLink className='link' to="/about" title="">About</NavLink>
         <NavLink className='link' to="/services" title="">Services</NavLink>
         <NavLink className='link' to="/contact" title="">Contact</NavLink>

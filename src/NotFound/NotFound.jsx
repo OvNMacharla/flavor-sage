@@ -12,7 +12,7 @@ function NotFound() {
               <span className="fade-in" id="digit3">4</span>
             </h1>
             <h3 className="fadeIn">PAGE NOT FOUND</h3>
-            <a href="home" className="btn btn-primary" title="">Return To Home</a>
+            <a href="/" className="btn btn-primary" title="">Return To Home</a>
           </div>
         </div>
     </div>

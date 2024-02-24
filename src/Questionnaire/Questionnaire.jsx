@@ -29,7 +29,7 @@ const Questionnaire = () => {
   const onFinish=(answers)=>{
     localStorage.setItem('answers', JSON.stringify(answers));
     console.log(answers);
-    navigate('/home');
+    navigate('/');
   }
 
   const handleNext = () => {

@@ -46,7 +46,7 @@ function Contact() {
                  </a>
                  <div style={{display: 'contents'}}>
                        <nav className="navEle">
-                       <NavLink className='link' to="/home" title="">Home</NavLink>
+                       <NavLink className='link' to="/" title="">Home</NavLink>
                        <NavLink className='link' to="/about" title="">About</NavLink>
                        <NavLink className='link' to="/services" title="">Services</NavLink>
                        <NavLink className='link' to="/contact" title="">Contact</NavLink>
@@ -116,7 +116,7 @@ function Contact() {
                         <div className="thankyou-wrapper">
                             <img className='imgElement' src={thankyou} alt="thanks" />
                               <p>Thank you for taking the time to provide us with your valuable feedback. Your input helps us improve our services and ensure that we continue to meet your needs and preferences.. </p>
-                                <a href="home" className="btn btn-primary" title="">Go Back</a>
+                                <a href="/" className="btn btn-primary" title="">Go Back</a>
                               <div className="clr"></div>
                           </div>
                           <div className="clr"></div>

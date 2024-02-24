@@ -20,7 +20,7 @@ function About() {
           </a>
           <div style={{display: 'contents'}}>
                 <nav className="navEle">
-                <NavLink className='link' to="/home" title="">Home</NavLink>
+                <NavLink className='link' to="/" title="">Home</NavLink>
                 <NavLink className='link' to="/about" title="">About</NavLink>
                 <NavLink className='link' to="/services" title="">Services</NavLink>
                 <NavLink className='link' to="/contact" title="">Contact</NavLink>
