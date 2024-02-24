@@ -5,3 +5,40 @@
 .grid-item{
     flex: auto;
 }
+.selectOption{
+    margin-top: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 0px;
+}
+.divElementQuestion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.popEle{
+        border: none;
+        border-radius: 10px;
+        width: 80%;
+        padding: 10%;
+        height:auto;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        width: 50%;
+}
+@media (min-width:768px){
+    .popEle{
+        width: 96%;
+}
+}
+.questionnaire-container-ele {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }

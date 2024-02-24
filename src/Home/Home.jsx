@@ -14,10 +14,36 @@ import non2 from '../assets/images/Prawn_Curry_non2.webp';
 import non3 from '../assets/images/FishCurry_non3.jpg';
 import { NavLink } from 'react-router-dom';
 import PopupEle from '../PopupEle/PopupEle';
+import Popup from 'reactjs-popup';
 
 function Home() {
   const [answers, setAnswers] = useState({});
   const [projects, setProjects] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const onFinish=(answers)=>{
+    localStorage.setItem('answers', JSON.stringify(answers));
+    setAnswers("")
+    console.log(answers);
+  }
+
+  const handleNext = () => {
+    if (!answers[currentIndex]) {
+      alert("Please select an option before proceeding.");
+      return;
+    }
+    if (currentIndex === questions.length - 1) {
+      onFinish(answers);
+    } else {
+      setCurrentIndex(prevIndex => prevIndex + 1);
+    }
+  };
+
+  const handleAnswerChange = (e) => {
+    const newAnswers = [...answers];
+    newAnswers[currentIndex] = e.target.value;
+    setAnswers(newAnswers);
+  };
 
   useEffect(() => {
     const storedAnswers = localStorage.getItem('answers');
@@ -48,13 +74,32 @@ function Home() {
     }
   }, [answers]);
 
+  const questions = [
+    {
+      question: 'Do you have any specific food preferences or things you can\'t eat?',
+      options: ['Vegetarian', 'Non-Vegetarian', 'Vegan']
+    },
+    {
+      question: 'How spicy do you like your food?',
+      options: ['Not spicy', 'Mild', 'Moderate', 'Spicy', 'Very spicy']
+    },
+    {
+      question: 'How much time do you prefer to spend on cooking?',
+      options: ['Less than 30 minutes', '30-60 minutes', 'More than 60 minutes']
+    },
+    {
+      question: 'Are there any specific ingredients you want to include or avoid?',
+      options: ['Yes', 'No']
+    }
+  ];
+
   return (
     <div className="carousel-container">
       <Header />
       <main className="" id="main-collapse">
         <div className="hero-full-wrapper">
         <div className="hidden-lg hidden-sm hidden-md hidden-xlg" style={{ display: 'flex',justifyContent:'space-between', gridGap: "10px" }}>
-              <a className="site-brand" title="">
+              <a href='' className="site-brand" title="">
                 <img className="img-responsive site-logo" alt="" src={logo} />
                 FLAVOR-SAGE
               </a>
@@ -66,10 +111,52 @@ function Home() {
                 <NavLink className='link' to="/contact" title="">Contact</NavLink>
               </nav>
               </div>
-              
+
             </div>
           <div className="grid">
-            
+          <Popup 
+              trigger={
+                <button className='selectOption' style={{ fontSize: '17px', fontWeight: '500' }} >
+                  {answers[0]}<span style={{paddingLeft:'15px'}}>↓</span>
+                </button>
+              }
+              modal
+              nested
+              position="center"
+              closeOnDocumentClick
+              onOpen={() => setCurrentIndex(0)}
+              contentStyle={{
+                width:'auto',
+                border: 'none',
+                borderRadius: '10px',
+                padding: '0px',
+                height:'auto',
+                boxShadow: '0 8px 16px rgba(0,0,0,0.1)',
+                animation: 'fade-in 0.3s'
+              }}
+              overlayStyle={{
+                background: 'rgba(0,0,0,0)',
+                zIndex: 1000,
+                animation: 'fade-in 0.3s'
+              }}
+            >
+              {close => (
+                <div className='divElementQuestion'>
+                  <div className="questionnaire-container-ele">
+                    <h1 className="question">{questions[currentIndex].question}</h1>
+                    <select className="answer" value={answers[currentIndex] || ""} onChange={handleAnswerChange}>
+                      <option value="" disabled hidden>Select an option</option>
+                      {questions[currentIndex].options.map((option, index) => (
+                        <option key={index} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                    <a href='' className="btn btn-primary" onClick={currentIndex === questions.length - 1 ? close : handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? 'Close' : 'Next'}</a>
+                  </div>
+                </div>
+              )}
+            </Popup>
             <h1 style={{ fontSize: '17px', fontWeight: '500' }}>
               Explore a curated selection of delicious recipes handpicked just for you. Whether you're looking for a quick weeknight meal or a special dish for a celebration, we've got you covered. Discover new flavors and cooking inspiration with our personalized recipe recommendations
             </h1>

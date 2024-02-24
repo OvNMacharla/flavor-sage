@@ -19,7 +19,7 @@ const questions = [
     question: 'Are there any specific ingredients you want to include or avoid?',
     options: ['Yes', 'No']
   }
-];;
+];
 
 const Questionnaire = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -55,18 +55,16 @@ const Questionnaire = () => {
       <div className="questionnaire-container">
       <h1 className="question">{questions[currentIndex].question}</h1>
       <select className="answer" value={answers[currentIndex] || ""} onChange={handleAnswerChange}>
-  <option value="" disabled hidden>Select an option</option>
-  {questions[currentIndex].options.map((option, index) => (
-    <option key={index} value={option}>
-      {option}
-    </option>
-  ))}
-</select>
-<a className="btn btn-primary" onClick={handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? 'Finish' : 'Next'}</a>
-
+        <option value="" disabled hidden>Select an option</option>
+        {questions[currentIndex].options.map((option, index) => (
+          <option key={index} value={option}>
+            {option}
+          </option>
+        ))}
+      </select>
+      <a className="btn btn-primary" onClick={handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? 'Finish' : 'Next'}</a>
     </div>
     </div>
-    
   );
 };
 
