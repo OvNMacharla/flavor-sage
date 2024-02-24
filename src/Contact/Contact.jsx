@@ -76,12 +76,12 @@ function Contact() {
                  </div>
                  <div className="col-md-6">
                    <ul className="list-unstyled address-container">
-                     <li>
+                     {/* <li>
                        <span className="fa-icon">
                          <i className="fa fa-phone" aria-hidden="true"></i>
                        </span>
                        +91 9121627633
-                     </li>
+                     </li> */}
                      <li>
                        <span className="fa-icon">
                          <i className="fa fa-at" aria-hidden="true"></i>

@@ -69,7 +69,9 @@ function PopupEle(props){
                     borderRadius: '10px',
                     padding: '20px',
                     boxShadow: '0 8px 16px rgba(0,0,0,0.1)',
-                    animation: 'fade-in 0.3s'
+                    animation: 'fade-in 0.3s',
+                    overflow: 'auto',
+                    maxHeight: '100vh'
                   }}
                   overlayStyle={{
                     background: 'rgba(0,0,0,0.5)',
