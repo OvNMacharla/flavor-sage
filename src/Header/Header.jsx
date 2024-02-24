@@ -25,17 +25,6 @@ function Header() {
       </nav>
 
       <nav className="nav-footer">
-        <p className="nav-footer-social-buttons">
-          <a className="fa-icon" href="https://www.instagram.com/" title="">
-            <i className="fa fa-instagram"></i>
-          </a>
-          <a className="fa-icon" href="https://dribbble.com/" title="">
-            <i className="fa fa-dribbble"></i>
-          </a>
-          <a className="fa-icon" href="https://twitter.com/" title="">
-            <i className="fa fa-twitter"></i>
-          </a>
-        </p>
         <p>©2024 | OvN</p>
       </nav>  
     </div> 

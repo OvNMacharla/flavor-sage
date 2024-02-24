@@ -1,0 +1,24 @@
+.thankyou-wrapper{
+  width:100%;
+  margin:auto;
+  background:#ffffff; 
+  padding:10px 0px 50px;
+  text-align: center;
+}
+.imgElement{
+    width: 59%;
+}
+.thankyou-wrapper h1{
+  text-align:center;
+  color:#333333;
+  padding:0px 10px 10px;
+}
+.thankyou-wrapper p{
+  text-align:center;
+  color:#333333;
+  padding:5px 10px 10px;
+}
+.login-main-container{
+    height: 100vh;
+    display: flex;
+}

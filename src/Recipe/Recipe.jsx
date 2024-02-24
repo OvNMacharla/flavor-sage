@@ -69,7 +69,7 @@ function Recipe() {
               </nav>
               </div>
         </div>
-                  <h1>Recipe Procedure</h1>
+                  <h3>Recipe Procedure</h3>
                   <p>These fluffy and delicious waffles are perfect for a weekend breakfast or brunch. Made with simple ingredients and cooked until golden brown, they are sure to be a hit with the whole family.</p>
               </div>
               <div className="section-container-spacer">
@@ -81,7 +81,7 @@ function Recipe() {
               <Markdown>{Text}</Markdown>
             </div> 
            </div>
-           <a onClick={generateNew} className="btn btn-primary" title="">Generate new recipe</a>
+           <a onClick={generateNew} style={{marginTop:"10px"}} className="btn btn-primary" title="">Generate new recipe</a>
           
       </main>
     </div>
