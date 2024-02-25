@@ -11,7 +11,7 @@ function Header() {
   <nav className="sidebar">
     <div className="navbar-collapse">
       <div className="site-header ">
-          <a className="site-brand" title="">
+          <a className="site-brand" href='/' title="">
             <img className="img-responsive site-logo" alt="" src={logo}/>
             FLAVOR-SAGE
           </a>
