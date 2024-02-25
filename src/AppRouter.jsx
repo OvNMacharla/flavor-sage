@@ -10,19 +10,22 @@ import Questionnaire from './Questionnaire/Questionnaire';
 import Recipe from './Recipe/Recipe';
 
 function AppRouter() {
-  const [answers, setAnswers] = useState({});
+  const [answers, setAnswers] = useState([]);
 
   useEffect(() => {
     const storedAnswers = localStorage.getItem('answers');
     if (storedAnswers) {
-      setAnswers(JSON.parse(storedAnswers));
+      const parsedAnswers = JSON.parse(storedAnswers);
+      setAnswers(parsedAnswers);
+      console.log(answers.length>0);
     }
   }, []);
   
   return (
     <Router>
       <Routes>
-        {answers[0]? (<Route path="/" element={<Home />} /> ): (<Route path="/" element={<Welcome />} />)}
+        {answers.length>0? (<Route path="/" element={<Home />} /> ): (<Route path="/" element={<Welcome />} />)}
+        
         {/* <Route path="/" element={<Welcome />} />
         <Route path="/home" element={<Home />} /> */}
         <Route path="/about" element={<About/>} />

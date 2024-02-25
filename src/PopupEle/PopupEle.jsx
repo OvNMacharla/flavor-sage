@@ -14,7 +14,6 @@ function PopupEle(props){
     if (storedAnswers) {
       setAnswers(JSON.parse(storedAnswers));
     }
-    console.log(storedAnswers)
   }, []);
 
   async function run() {
@@ -27,7 +26,6 @@ function PopupEle(props){
       else{
         promt = 'Generate a receipe of '+project.title+". Please make in " + answers[2]+" With spiciness of "+answers[1]+" Frame that answer in a table with starting ingredients then instruction";
       }
-      console.log(promt)
       const result = await model.generateContent(promt);
       console.log(result)
       const response = await result.response;

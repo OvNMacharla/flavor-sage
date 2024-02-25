@@ -29,7 +29,7 @@ const Questionnaire = () => {
   const onFinish=(answers)=>{
     localStorage.setItem('answers', JSON.stringify(answers));
     console.log(answers);
-    navigate('/');
+    window.location.href = '/';
   }
 
   const handleNext = () => {
@@ -62,7 +62,7 @@ const Questionnaire = () => {
           </option>
         ))}
       </select>
-      <a className="btn btn-primary" onClick={handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? 'Finish' : 'Next'}</a>
+      <a className="btn btn-primary" onClick={handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? "Finish" : 'Next'}</a>
     </div>
     </div>
   );
