@@ -22,7 +22,7 @@ function AppRouter() {
   return (
     <Router>
       <Routes>
-        {answers ? (<Route path="/" element={<Home />} /> ): (<Route path="/" element={<Welcome />} />)}
+        {answers[0]? (<Route path="/" element={<Home />} /> ): (<Route path="/" element={<Welcome />} />)}
         {/* <Route path="/" element={<Welcome />} />
         <Route path="/home" element={<Home />} /> */}
         <Route path="/about" element={<About/>} />
