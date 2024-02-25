@@ -99,7 +99,7 @@ function Contact() {
                    <a target='_blank' href="https://www.linkedin.com/in/ome-venkata-nagarjuna?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="" className="fa-icon">
                      <i className="fa fa-linkedin"></i>
                    </a>
-                   <a href="https://dribbble.com/" title="" className="fa-icon">
+                   <a href="" title="" className="fa-icon">
                      <i className="fa fa-dribbble"></i>
                    </a>
                  </div>
