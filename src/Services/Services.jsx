@@ -11,7 +11,7 @@ function Services() {
         <Header/>
         <main className="" id="main-collapse">
         <div className="hidden-lg hidden-sm hidden-md hidden-xlg" style={{display:'flex',justifyContent:'space-between',gridGap:"10px"}}>
-          <a className="site-brand" title="">
+          <a className="site-brand" title="" href='/'>
             <img className="img-responsive site-logo" alt="" src={logo}/>
             FLAVOR-SAGE
           </a>
