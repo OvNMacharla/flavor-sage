@@ -13,7 +13,7 @@ function Welcome() {
               <h1 className='headEle'><span className='welEle'>WELCOME</span><br/> to FLAVOR-SAGE</h1>
               <p className='paraEle'>
                 Discover a world of culinary delights tailored just for you. Whether you're a cooking enthusiast or simply looking for new flavours to 
-                savour, our smat recipe recommender is here to guide you on a personalized culinary journey.
+                savour, our smart recipe recommender is here to guide you on a personalized culinary journey.
               </p>  
 
             
