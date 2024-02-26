@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import './Questionnaire.css'; // Import your CSS file
+import React, {useState} from 'react';
+import Box from '@mui/material/Box';
+import Slide from '@mui/material/Slide';
+import './Questionnaire.css'; 
 import { useNavigate } from 'react-router-dom';
 
 const questions = [
@@ -20,11 +22,13 @@ const questions = [
     options: ['Yes', 'No']
   }
 ];
+  
 
-const Questionnaire = () => {
+export default function Questionnaire() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const navigate = useNavigate();
+  const [checked, setChecked] = React.useState(true);
 
   const onFinish=(answers)=>{
     localStorage.setItem('answers', JSON.stringify(answers));
@@ -51,21 +55,30 @@ const Questionnaire = () => {
   };
 
   return (
-    <div className='divEleQuestion'>
-      <div className="questionnaire-container">
-      <h1 className="question">{questions[currentIndex].question}</h1>
-      <select className="answer" value={answers[currentIndex] || ""} onChange={handleAnswerChange}>
-        <option value="" disabled hidden>Select an option</option>
-        {questions[currentIndex].options.map((option, index) => (
-          <option key={index} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
-      <a className="btn btn-primary" onClick={handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? "Finish" : 'Next'}</a>
-    </div>
-    </div>
+    <Box
+      sx={{
+        position: 'relative',
+        zIndex: 1,
+      }}
+    >
+      <Slide direction="left" in={checked} mountOnEnter unmountOnExit>
+        {(
+          <div className='divEleQuestion'>
+          <div className="questionnaire-container">
+          <h1 className="question">{questions[currentIndex].question}</h1>
+          <select className="answer" value={answers[currentIndex] || ""} onChange={handleAnswerChange}>
+            <option value="" disabled hidden>Select an option</option>
+            {questions[currentIndex].options.map((option, index) => (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+          <a className="btn btn-primary" onClick={handleNext}  disabled={!answers[currentIndex]} title="">{currentIndex === questions.length - 1 ? "Finish" : 'Next'}</a>
+        </div>
+        </div>
+        )}
+      </Slide>
+    </Box>
   );
-};
-
-export default Questionnaire;
+}
