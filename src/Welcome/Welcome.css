@@ -64,7 +64,7 @@
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:600);
-h1 {
+.headEle {
 	color: #fff;
 	font-size: 52px;
 	font-weight: 600;
