@@ -65,10 +65,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:600);
 .headEle {
-	color: #fff;
-	font-size: 52px;
 	font-weight: 600;
-	text-transform: uppercase;
 	span {
 		display: inline-block;
 		opacity: 0;
