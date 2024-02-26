@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const questions = [
   {
-    question: 'Do you have any specific food preferences or things you can\'t eat?',
+    question: 'Do you have any specific food preferences?',
     options: ['Vegetarian', 'Non-Vegetarian', 'Vegan']
   },
   {
