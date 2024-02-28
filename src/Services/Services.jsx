@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css'
 import Header from '../Header/Header';
-import img12 from '../assets/images/food-4k-3gsi5u6kjma5zkj0.jpg';
+import img12 from '../assets/images/dcc6d4ea22c553ae169e6637c085e389.jpg';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/mashup-logo.svg'
 function Services() {
@@ -25,12 +25,23 @@ function Services() {
               </div>
         </div>
         <div className="about-container">
-          
-              <img src={img12} alt="About" className="about-image" />
-              <p>Welcome to our Recipe Recommender, your go-to source for finding delicious recipes tailored to your preferences.</p>
-              <p>Our mission is to simplify cooking and inspire you to explore new flavors and ingredients.</p>
-              <p>Would you like to see more recipes?</p>
-              <Link to="/recipe" className="btn btn-primary">See More Recipes</Link>
+        <div className="col-xs-12 col-md-6">
+          <img src={img12} alt="About" className="about-image" />
+        </div>
+        <div className="col-xs-12 col-md-6">
+           <h3>Welcome to our Recipe Recommender</h3>
+           <p>Your go-to source for finding delicious recipes tailored to your preferences.</p>
+            <p>Our mission is to simplify cooking and inspire you to explore new flavors and ingredients.</p>
+            <p>At Recipe Recommender, we're passionate about simplifying the cooking experience and inspiring culinary exploration. Whether you're a seasoned chef or a novice in the kitchen, our goal is to empower you to create delicious meals with ease. Our extensive collection of recipes spans various cuisines, dietary restrictions, and cooking techniques. From quick and easy weeknight dinners to gourmet weekend indulgences, we've got you covered.</p>
+            <h3>Customized Recipe Search</h3>
+            <p>With our user-friendly interface, you can easily filter recipes based on ingredients, cooking time, dietary preferences, and more. Whether you're looking for gluten-free, vegan, or keto-friendly options, we've curated a diverse selection to suit every palate.</p>
+            <p>But we're more than just a recipe website – we're your personal culinary companion. Our team of food enthusiasts and nutrition experts is dedicated to providing helpful tips, cooking hacks, and ingredient substitutions to elevate your cooking experience.</p>
+            <h3>Embark on a Culinary Adventure</h3>
+            <p>So, are you ready to embark on a culinary adventure? Let Recipe Recommender be your guide as you explore the wonderful world of cooking. Get ready to tantalize your taste buds and impress your family and friends with our delectable recipes.</p>
+            <p>Would you like to discover more recipes and embark on a culinary journey with us? Let's dive in and unleash your inner chef!</p>
+            <Link to="/recipe" className="btn btn-primary">See More Recipes</Link>
+        </div>
+       
         </div>
         </main>
     </div>
