@@ -32,8 +32,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . src/**/*.jsx",
+    "lint:fix": "eslint . src/**/*.jsx --fix",
     "format": "prettier . --write"
 },
 "husky": {
@@ -68,8 +68,10 @@
     "prettier": "^3.3.3"
   },
   "lint-staged": {
-  "src/**/*.{js,jsx,ts,tsx}": [
-    "npm run lint"
-  ]
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint",
+      "npm run lint:fix",
+      "git add ."
+    ]
 }
 }
